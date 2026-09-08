@@ -23,4 +23,21 @@ dados = pd.DataFrame({
 dados["nota_anterior"] = dados["horas_estudo"] * 1.5 + np.random.normal(0, 1, 50)
 
 # exibe a tabela
-print(dados)
+# print(dados)
+
+# criando a matriz de correlação
+# (descobre qual var tem relação com qual - se uma var aumentar a outra também aumenta, por exemplo)
+matriz_correlacao = dados.corr()
+
+# exibindo a matriz
+# horas_estudo e nota_anterior se relacionam
+# print(matriz_correlacao)
+
+# remove a coluna nota_anterior e salva em um novo dataframe (etapa 2)
+dados_filtrados = dados.drop(columns=['nota_anterior'])
+
+# print(dados_filtrados.columns)
+
+# cria uma coluna 'engajamento_total'
+# ela é soma da frequência e participação
+dados["engajamento_total"] = dados["frequencia"] + dados["participacao"]
