@@ -3,6 +3,10 @@
 import pandas as pd
 import numpy as np
 
+#importando o PCA 
+from sklearn.decomposition import PCA
+
+
 # definindo uma seed para o numpy
 # garanto que em todas as 'rodadas'
 # os mesmos resultados serão apresentados 
@@ -40,5 +44,15 @@ dados_filtrados = dados.drop(columns=['nota_anterior'])
 
 # cria uma coluna 'engajamento_total'
 # ela é soma da frequência e participação
-dados["engajamento_total"] = dados["frequencia"] + dados["participacao"]
+dados_filtrados["engajamento_total"] = (dados_filtrados["frequencia"] + dados_filtrados["participacao"])
 
+# cria a ferramenta que fará os cálculos
+pca = PCA()
+
+# calcula os componentes e transforma a tabela antiga em uma estrutura simplificada (dados_pca)
+dados_pca = pca.fit_transform(dados_filtrados)
+
+# calcula a porcentagem de informação que cada coluna conseguiu preservar da tabela original
+variancia = pca.explained_variance_ratio_
+
+print(variancia)
