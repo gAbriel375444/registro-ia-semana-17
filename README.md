@@ -1,0 +1,1 @@
+Instanlando a biblioteca pandas com pip install pandas
