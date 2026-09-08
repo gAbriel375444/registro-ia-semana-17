@@ -41,3 +41,4 @@ dados_filtrados = dados.drop(columns=['nota_anterior'])
 # cria uma coluna 'engajamento_total'
 # ela é soma da frequência e participação
 dados["engajamento_total"] = dados["frequencia"] + dados["participacao"]
+

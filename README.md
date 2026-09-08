@@ -10,3 +10,5 @@ A váriavel escolhida é a notas_anterior, pois é altamente correlacionada à h
 
 Etapa 3 — Criação de nova feature
 
+A criação da variável engajamento_total através da soma de frequencia e participacao é útil porque simplifica o modelo, consolidando duas métricas complementares em um único indicador robusto de comportamento. Isoladamente, estar presente ou falar nas aulas fornece apenas visões parciais, mas combinadas elas capturam com maior precisão o conceito abstrato de comprometimento do estudante. Essa abordagem reduz o ruído de dados isolados (como um aluno assíduo porém tímido), fornece uma métrica compensatória e entrega um padrão de comportamento já mastigado para o algoritmo, o que facilita o aprendizado e tende a aumentar o poder preditivo do modelo final.
+
